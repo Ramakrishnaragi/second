@@ -18,7 +18,7 @@ pipeline {
 
         stage('Create file-2') {
             steps {
-                sh 'touch file-3'
+                sh 'touch file-4'
             }
         }
     }
