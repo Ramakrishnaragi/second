@@ -1,16 +1,24 @@
 pipeline {
     agent any
+
     triggers {
         githubPush()
     }
+
     stages {
-        stage('file') {
+        stage('Create file-1') {
             steps {
                 sh '''
                     touch file-1
                     echo "hellow" > file-1
                     cat file-1
                 '''
+            }
+        }
+
+        stage('Create file-2') {
+            steps {
+                sh 'touch file-2'
             }
         }
     }
